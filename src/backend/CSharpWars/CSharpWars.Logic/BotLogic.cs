@@ -49,8 +49,9 @@ namespace CSharpWars.Logic
         public async Task<IList<BotDto>> GetAllActiveBots()
         {
             var timeToCompare = DateTime.UtcNow.AddSeconds(-10);
-            var bots = await _botRepository.Find(b => b.CurrentHealth > 0 || b.TimeOfDeath > timeToCompare);
-            return _botMapper.Map(bots);
+
+            var activeBots = await _botRepository.Find(b => b.CurrentHealth > 0 || b.TimeOfDeath > timeToCompare);
+            return _botMapper.Map(activeBots);
         }
 
         public async Task<IList<BotDto>> GetAllLiveBots()
