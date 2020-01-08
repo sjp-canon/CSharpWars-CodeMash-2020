@@ -4,6 +4,9 @@ namespace Assets.Scripts.Controllers
 {
     public class ArenaController : MonoBehaviour
     {
-        
+        public void Start()
+        {
+
+        }
     }
 }

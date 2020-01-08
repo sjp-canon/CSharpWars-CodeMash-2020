@@ -2,6 +2,8 @@
 {
     public static class ApiClient
     {
-        
+        private static readonly string _baseUrl = "http://csharpwars-api.azurefd.net/api";
+
+
     }
 }

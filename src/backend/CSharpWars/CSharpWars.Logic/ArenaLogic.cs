@@ -14,9 +14,15 @@ namespace CSharpWars.Logic
         {
             _configurationHelper = configurationHelper;
         }
+
         public Task<ArenaDto> GetArena()
         {
-            throw new NotImplementedException();
+            return Task.FromResult(
+                new ArenaDto()
+                {
+                    Height = _configurationHelper.ArenaSize,
+                    Width = _configurationHelper.ArenaSize
+                });
         }
     }
 }
